@@ -1,0 +1,40 @@
+package ${packageName}.${applicationPackage}.service.impl;
+
+import ${packageName}.${applicationPackage}.service.${baseName}I;
+import ${packageName}.${domainPackage}.gateway.${baseName}Gateway;
+import ${packageName}.${domainPackage}.dto.${baseName}DTO;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import java.util.List;
+import java.util.Date;
+
+@Service
+public class ${baseName}Impl implements ${baseName}I {
+    @Autowired
+    private ${baseName}Gateway ${baseNameCamelCase}Gateway;
+
+    @Override
+    public void updateIsPrint(String billCode) {
+        ${baseNameCamelCase}Gateway.updateIsPrint(billCode);
+    }
+
+    @Override
+    public void save(${baseName}DTO dto) {
+        ${baseNameCamelCase}Gateway.save(dto);
+    }
+
+    @Override
+    public void updateShipByBillCode(String billCode, Double scanWeight, Date scanDate, String status) {
+        ${baseNameCamelCase}Gateway.updateShipByBillCode(billCode, scanWeight, scanDate, status);
+    }
+
+    @Override
+    public void updateByOrderCode(String billCode, String status) {
+        ${baseNameCamelCase}Gateway.updateByOrderCode(billCode, status);
+    }
+
+    @Override
+    public void updateCancelByBillCode(List<String> billCodes) {
+        ${baseNameCamelCase}Gateway.updateCancelByBillCode(billCodes);
+    }
+} 

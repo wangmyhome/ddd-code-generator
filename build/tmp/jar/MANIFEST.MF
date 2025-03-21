@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Created-By: Gradle 6.8.3
+Build-JVM: 11.0.26 (Eclipse Adoptium 11.0.26+4)
+Version: 1.0-SNAPSHOT
+Build-Plugin: Gradle IntelliJ Plugin
+Build-Plugin-Version: 1.5.2
+Build-OS: Windows 10 10.0 amd64
+Build-SDK: IC-2021.3
+

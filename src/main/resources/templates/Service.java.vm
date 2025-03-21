@@ -1,0 +1,17 @@
+package ${packageName}.${applicationPackage}.service;
+
+import ${packageName}.${domainPackage}.dto.${baseName}DTO;
+import java.util.List;
+import java.util.Date;
+
+public interface ${baseName}I {
+    void updateIsPrint(String billCode);
+    
+    void save(${baseName}DTO dto);
+    
+    void updateShipByBillCode(String billCode, Double scanWeight, Date scanDate, String status);
+    
+    void updateByOrderCode(String billCode, String status);
+    
+    void updateCancelByBillCode(List<String> billCodes);
+} 

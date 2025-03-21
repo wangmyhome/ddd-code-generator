@@ -1,0 +1,43 @@
+package ${packageName}.${infrastructurePackage}.gateway.impl;
+
+import ${packageName}.${domainPackage}.gateway.${baseName}Gateway;
+import ${packageName}.${domainPackage}.dto.${baseName}DTO;
+import ${packageName}.${ormPackage}.entity.${baseName};
+import ${packageName}.${ormPackage}.mapper.${baseName}Mapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import java.util.List;
+import java.util.Date;
+
+@Service
+public class ${baseName}GatewayImpl implements ${baseName}Gateway {
+    @Autowired
+    private ${baseName}Mapper ${baseNameCamelCase}Mapper;
+
+    @Override
+    public void updateIsPrint(String billCode) {
+        ${baseNameCamelCase}Mapper.updateIsPrint(billCode);
+    }
+
+    @Override
+    public void save(${baseName}DTO dto) {
+        ${baseName} entity = new ${baseName}();
+        // TODO: Convert DTO to entity
+        ${baseNameCamelCase}Mapper.save(entity);
+    }
+
+    @Override
+    public void updateShipByBillCode(String billCode, Double scanWeight, Date scanDate, String status) {
+        ${baseNameCamelCase}Mapper.updateShipByBillCode(billCode, scanWeight, scanDate, status);
+    }
+
+    @Override
+    public void updateByOrderCode(String billCode, String status) {
+        ${baseNameCamelCase}Mapper.updateByOrderCode(billCode, status);
+    }
+
+    @Override
+    public void updateCancelByBillCode(List<String> billCodes) {
+        ${baseNameCamelCase}Mapper.updateCancelByBillCode(billCodes);
+    }
+} 

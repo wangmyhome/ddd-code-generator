@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<idea-plugin>
+    <id>com.zto.ddd.code.generator</id>
+    <name>DDD代码生成器</name>
+    <vendor>ZTO</vendor>
+    <description>根据Mapper文件自动生成DDD架构代码</description>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.java</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <applicationService serviceImplementation="com.zto.ddd.code.generator.config.GeneratorSettings"/>
+        <projectService serviceImplementation="com.zto.ddd.code.generator.service.CodeGeneratorService"/>
+    </extensions>
+
+    <actions>
+        <action id="GenerateDDDCode" 
+                class="com.zto.ddd.code.generator.action.GenerateDDDCodeAction" 
+                text="生成DDD代码" 
+                description="根据Mapper文件生成DDD架构代码">
+            <add-to-group group-id="ProjectViewPopupMenu" anchor="last"/>
+        </action>
+    </actions>
+</idea-plugin> 

@@ -1,0 +1,45 @@
+plugins {
+    id 'java'
+    id 'org.jetbrains.intellij' version '1.5.2'
+}
+
+group 'com.zto'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+dependencies {
+    implementation 'org.projectlombok:lombok:1.18.24'
+    annotationProcessor 'org.projectlombok:lombok:1.18.24'
+}
+
+intellij {
+    version = '2021.3'
+    type = 'IC'
+    plugins = ['java']
+}
+
+patchPluginXml {
+    sinceBuild = '213'
+    untilBuild = '241.*'
+}
+
+processResources {
+    from('src/main/resources') {
+        include '**/*.vm'
+        include '**/*.xml'
+    }
+}
+
+test {
+    useJUnitPlatform()
+}
+
+sourceCompatibility = JavaVersion.VERSION_11
+targetCompatibility = JavaVersion.VERSION_11 

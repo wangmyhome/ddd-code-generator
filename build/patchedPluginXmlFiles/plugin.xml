@@ -1,0 +1,19 @@
+<idea-plugin>
+  <version>1.0-SNAPSHOT</version>
+  <idea-version since-build="213" until-build="241.*" />
+  <id>com.zto.ddd.code.generator</id>
+  <name>DDD Code Generator</name>
+  <vendor>ZTO</vendor>
+  <description>Generate DDD architecture code from Mapper files</description>
+  <depends>com.intellij.modules.platform</depends>
+  <depends>com.intellij.modules.java</depends>
+  <extensions defaultExtensionNs="com.intellij">
+    <applicationService serviceImplementation="com.zto.ddd.code.generator.config.GeneratorSettings" />
+    <projectService serviceImplementation="com.zto.ddd.code.generator.service.CodeGeneratorService" />
+  </extensions>
+  <actions>
+    <action id="GenerateDDDCode" class="com.zto.ddd.code.generator.action.GenerateDDDCodeAction" text="Generate DDD Code" description="Generate DDD architecture code from Mapper">
+      <add-to-group group-id="ProjectViewPopupMenu" anchor="last" />
+    </action>
+  </actions>
+</idea-plugin>

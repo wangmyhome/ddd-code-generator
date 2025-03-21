@@ -1,0 +1,24 @@
+package ${packageName}.${domainPackage}.dto;
+
+import lombok.Data;
+import java.io.Serializable;
+import java.util.Date;
+
+@Data
+public class ${baseName}DTO implements Serializable {
+    private static final long serialVersionUID = 1L;
+
+    private Long id;
+    private String empCode;
+    private String ship;
+    private String insured;
+    private String billCode;
+    private String status;
+    private Integer isPrint;
+    private Double scanWeight;
+    private Date scanDate;
+    private Date createTime;
+    private Date updateTime;
+    private String orderCode;
+    private Integer cancelStatus;
+} 
