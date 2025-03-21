@@ -1,0 +1,13 @@
+<options>
+  <configurable id="preferences.keymap" configurable_name="Keymap">
+    <option name="code" path="ActionManager" hit="Generate DDD Code" />
+    <option name="ddd" path="ActionManager" hit="Generate DDD Code" />
+    <option name="generate" path="ActionManager" hit="Generate DDD Code" />
+    <option name="architecture" path="ActionManager" hit="Generate DDD architecture code from Mapper" />
+    <option name="code" path="ActionManager" hit="Generate DDD architecture code from Mapper" />
+    <option name="ddd" path="ActionManager" hit="Generate DDD architecture code from Mapper" />
+    <option name="from" path="ActionManager" hit="Generate DDD architecture code from Mapper" />
+    <option name="generate" path="ActionManager" hit="Generate DDD architecture code from Mapper" />
+    <option name="mapper" path="ActionManager" hit="Generate DDD architecture code from Mapper" />
+  </configurable>
+</options>
